@@ -8,10 +8,10 @@ public class MenuComida {
         do{
             System.out.println("\n=====Menu Comida=====");
             System.out.println("1.Pizza personalizada - $12.25");
-            System.out.println("2.Hamburguesa-$8.00");
-            System.out.println("3.Ensalada-$4.15");
+            System.out.println("2.Hamburguesa - $8.00");
+            System.out.println("3.Ensalada - $4.15");
             System.out.println("4.Bebidas");
-            System.out.println("5.Salir");
+            System.out.println("5.Imprimir factura");
             
             System.out.println("Seleccione una opcion: ");
             opcion = key.nextInt();
@@ -89,7 +89,7 @@ public class MenuComida {
          System.out.println("1.Coca-Cola - $1.50");
           System.out.println("2.Jugo-Natural - $1.25");
            System.out.println("3.Te frio - $1.00");
-            System.out.println("4.Agua -$1.00");
+            System.out.println("4.Agua - $1.00");
              System.out.println("Seleccione Bebida: ");
 
             Bebida= key.nextInt();

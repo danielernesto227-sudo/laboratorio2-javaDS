@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.util.Scanner; //Importamos Scanner para leer datos del usuario
 public class MenuComida {
     public static void main(String[] args) {
-        Scanner key = new Scanner(System.in);
-        int opcion;
-        double total = 0;
-        boolean continuar = true;
+        Scanner key = new Scanner(System.in);  // Objeto para capturar datos del teclado
+        int opcion;         // Variable para guardar la opción del menú principal
+        double total = 0;   // Variable acumuladora del total a pagar
+        boolean continuar = true; // Controla el ciclo del menú
+
+        // Ciclo principal del menú
         do{
-            System.out.println("\n=====Menu Comida=====");
+            System.out.println("\n=====Menu Comida=====");  // \n hace un salto de línea
             System.out.println("1.Pizza personalizada - $12.25");
             System.out.println("2.Hamburguesa - $8.00");
             System.out.println("3.Ensalada - $4.15");
@@ -14,14 +16,16 @@ public class MenuComida {
             System.out.println("5.Imprimir factura");
             
             System.out.println("Seleccione una opcion: ");
-            opcion = key.nextInt();
+            opcion = key.nextInt();    // Capturamos la opción elegida
+
+            // Evaluamos la opción seleccionada
             switch (opcion){
                 case 1:
                     System.out.println("Pizza agregada");
-                    total += 12.25;
-                    total += elejirIngredientes(key);
+                    total += 12.25; // Sumamos precio base
+                    total += elejirIngredientes(key); // Sumamos ingredientes extra
                     break;
-                    case 2 :
+                case 2 :
                         System.out.println("Hamburguesa agregada");
                         total +=8.00;
                         break;
@@ -31,26 +35,33 @@ public class MenuComida {
                             break;
                             case 4 :
                                 System.out.println("Bebida agregada");
-                                total += elejirBebida(key);
+                                total += elejirBebida(key);     // Llamamos método bebida
                                 break;
                                 case 5 :
-                                    continuar= false;
+                                    continuar= false;   // Finaliza el ciclo
                                     break;
                                     default:
                                         System.out.println("Opcion invalida");
             }
-            }while (continuar);
+            }while (continuar);     // Se repite mientras continuar sea true
+                                        
+                                                // Factura final
+
                                         System.out.println("\n=====factura final=====");
                                         System.out.println("Total a pagar: $"+ total);
                                         System.out.println("Gracias por su compra");
 
-                                        key.close();
+                                        key.close();       // Cerramos el Scanner
 
     }
+     /*
+     * Método que permite agregar ingredientes extra a la pizza.
+     * Retorna el costo adicional seleccionado.
+     */
     public static double elejirIngredientes(Scanner key) {
-            int ingrediente;
-            double more= 0;
-            boolean adding = true;
+            int ingrediente;    // Guarda la opción elegida
+            double more= 0;      // Acumula el costo extra   
+            boolean adding = true;  // Controla el ciclo de ingredientes
             do{
                 System.out.println("\n---Ingredientes---");
                 System.out.println("1.Extra queso - $1.00");
@@ -72,19 +83,22 @@ public class MenuComida {
                                 break;
                                 case 4:
                                     adding = false;
-
-                
+                                    break;
                     default:
                         System.out.println("Opcion invalida");
                         break;
                 }
+                 /*
+     * Método que permite seleccionar una bebida.
+     * Retorna el precio de la bebida seleccionada.
+     */
 
             }while(adding);
-            return more;
+            return more;        // Devuelve el total adicional
     }
     public static double elejirBebida(Scanner key){
-        int Bebida;
-        double price = 0;
+        int Bebida;     // Guarda la opción elegida
+        double price = 0;   // Precio de la bebida
         System.out.println("\n---Bebida---");
          System.out.println("1.Coca-Cola - $1.50");
           System.out.println("2.Jugo-Natural - $1.25");
@@ -111,6 +125,6 @@ public class MenuComida {
                                     System.out.println("Opcion invalida");
                                     
             } 
-               return price;
+               return price;  // Retorna el precio seleccionado
     }
 }

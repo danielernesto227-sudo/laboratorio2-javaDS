@@ -7,8 +7,8 @@ public class ContadorEstrellas {
         Scanner sc = new Scanner(System.in);
         String repeat;
         do{
-        System.out.println("Welcome to Andromeda ");
-        System.out.println("¿How many stars do you want?: ");
+        System.out.println("Welcome to Andromeda\n¿How many stars do you want?: ");
+       // System.out.println("¿How many stars do you want?: ");
         int number = sc.nextInt();
 
         for (int i = 1; i <= number; i++) {

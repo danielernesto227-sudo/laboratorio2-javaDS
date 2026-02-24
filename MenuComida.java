@@ -9,12 +9,13 @@ public class MenuComida {
         // Ciclo principal del menú
         do{
             System.out.println("\n=====Menu Comida=====");  // \n hace un salto de línea
-            System.out.println("1.Pizza personalizada - $12.25");
-            System.out.println("2.Hamburguesa - $8.00");
+            System.out.println("1.Pizza personalizada - $12.25\n2.Hamburguesa - $8.00"+
+            "\n3.Ensalada - $4.15 \n4.Bebidas \n5.Imprimir factura");
+           /*System.out.println("2.Hamburguesa - $8.00");
             System.out.println("3.Ensalada - $4.15");
             System.out.println("4.Bebidas");
             System.out.println("5.Imprimir factura");
-            
+             */
             System.out.println("Seleccione una opcion: ");
             opcion = key.nextInt();    // Capturamos la opción elegida
 

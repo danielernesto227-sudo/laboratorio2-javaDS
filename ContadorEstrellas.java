@@ -9,8 +9,7 @@ public class ContadorEstrellas {
         do{
         System.out.println("Welcome to Andromeda\n¿How many stars do you want?: ");
        // System.out.println("¿How many stars do you want?: ");
-        int number = sc.nextInt();
-
+        int number= sc.nextInt();
         for (int i = 1; i <= number; i++) {
             System.out.print("*");
         }
@@ -23,7 +22,8 @@ public class ContadorEstrellas {
             System.out.println("Thank you,you save us stars,jajaja");
         }
 
-        }while (repeat.contentEquals("s"));
+        }
+        while (repeat.contentEquals("s"));
        
         sc.close();
         

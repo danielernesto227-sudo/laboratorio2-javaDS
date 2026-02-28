@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class AdivinarNumero{
+public class GuesNumber{
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Random rm = new Random(); 
@@ -28,5 +28,6 @@ if (attempts < maxAttempts){
      if (attempts== maxAttempts){
         System.out.println("Se acaberon los intentos, el numero era "+ secretNumber); }
     }
+    sc.close();
     }
     }

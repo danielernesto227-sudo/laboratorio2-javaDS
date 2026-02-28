@@ -28,5 +28,6 @@ if (attempts < maxAttempts){
      if (attempts== maxAttempts){
         System.out.println("Se acaberon los intentos, el numero era "+ secretNumber); }
     }
+    sc.close();
     }
     }

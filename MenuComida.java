@@ -5,7 +5,6 @@ public class MenuComida {
         int opcion;         // Variable para guardar la opción del menú principal
         double total = 0;   // Variable acumuladora del total a pagar
         boolean continuar = true; // Controla el ciclo del menú
-
         // Ciclo principal del menú
         do{
             System.out.println("\n=====Menu Comida=====");  // \n hace un salto de línea
@@ -40,7 +39,7 @@ public class MenuComida {
                      total += elejirBebida(key);     // Llamamos método bebida
                      break;
                  case 5 :
-                     continuar= false;   // Finaliza el ciclo
+                     continuar= false;  // Finaliza el ciclo
                      break;
                  default:
                     System.out.println("Opcion invalida");

@@ -12,7 +12,7 @@ public class ContadorEstrellas {
         int number= sc.nextInt();
         for (int i = 1; i <= number; i++) {
             System.out.print("*");
-        }
+                                        }
 
         System.out.print("\nDo you want more stars?(s/n): ");
         repeat = sc.next();

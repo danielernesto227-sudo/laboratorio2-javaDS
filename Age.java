@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class Age {
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
          String repeat;
          int sum = 0; // suma de edades

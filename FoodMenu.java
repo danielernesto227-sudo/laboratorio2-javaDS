@@ -1,11 +1,10 @@
 import java.util.Scanner; //Importamos Scanner para leer datos del usuario
-public class MenuComida {
+public class FoodMenu {
     public static void main(String[] args) {
         Scanner key = new Scanner(System.in);  // Objeto para capturar datos del teclado
-        int opcion;         // Variable para guardar la opción del menú principal
+        int option;         // Variable para guardar la opción del menú principal
         double total = 0;   // Variable acumuladora del total a pagar
-        boolean continuar = true; // Controla el ciclo del menú
-
+        boolean keep = true; // Controla el ciclo del menú
         // Ciclo principal del menú
         do{
             System.out.println("\n=====Menu Comida=====");  // \n hace un salto de línea
@@ -18,14 +17,14 @@ public class MenuComida {
              
             System.out.println("Seleccione una opcion: ");
             */
-            opcion = key.nextInt();    // Capturamos la opción elegida
+            option = key.nextInt();    // Capturamos la opción elegida
 
             // Evaluamos la opción seleccionada
-            switch (opcion){
+            switch (option){
                 case 1:
                     System.out.println("Pizza agregada");
                     total += 12.25; // Sumamos precio base
-                    total += elejirIngredientes(key); // Sumamos ingredientes extra
+                    total += chooseIngredients(key); // Sumamos ingredientes extra
                     break;
                 case 2 :
                      System.out.println("Hamburguesa agregada");
@@ -37,15 +36,15 @@ public class MenuComida {
                      break;
                  case 4 :
                      System.out.println("Bebida agregada");
-                     total += elejirBebida(key);     // Llamamos método bebida
+                     total += chooseDrink(key);     // Llamamos método bebida
                      break;
                  case 5 :
-                     continuar= false;   // Finaliza el ciclo
+                     keep= false;  // Finaliza el ciclo
                      break;
                  default:
                     System.out.println("Opcion invalida");
             }
-            }while (continuar);     // Se repite mientras continuar sea true
+            }while (keep);     // Se repite mientras continuar sea true
                                         
                                                 // Factura final
 
@@ -60,8 +59,8 @@ public class MenuComida {
      * Método que permite agregar ingredientes extra a la pizza.
      * Retorna el costo adicional seleccionado.
      */
-    public static double elejirIngredientes(Scanner key) {
-            int ingrediente;    // Guarda la opción elegida
+    public static double chooseIngredients(Scanner key) {
+            int ingredients;    // Guarda la opción elegida
             double more= 0;      // Acumula el costo extra   
             boolean adding = true;  // Controla el ciclo de ingredientes
             do{
@@ -73,8 +72,8 @@ public class MenuComida {
                 System.out.println("4.Terminar");
                 System.out.println("Seleccione Ingredientes: ");
                */
-                ingrediente= key.nextInt();
-                switch (ingrediente) {
+                ingredients= key.nextInt();
+                switch (ingredients) {
                     case 1:
                         more +=1.00;
                         break;
@@ -99,8 +98,8 @@ public class MenuComida {
             }while(adding);
             return more;        // Devuelve el total adicional
     }
-    public static double elejirBebida(Scanner key){
-        int Bebida;     // Guarda la opción elegida
+    public static double chooseDrink(Scanner key){
+        int drink;     // Guarda la opción elegida
         double price = 0;   // Precio de la bebida
         System.out.println("\n---Bebida---");
         System.out.println("1.Coca-Cola - $1.50\n2.Jugo-Natural - $1.25"+
@@ -110,8 +109,8 @@ public class MenuComida {
         System.out.println("4.Agua - $1.00");
         System.out.println("Seleccione Bebida: ");
         */
-            Bebida= key.nextInt();
-            switch (Bebida){
+            drink= key.nextInt();
+            switch (drink){
                 case 1:
                     price=1.50;
                     break;

@@ -1,14 +1,13 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuesNumber{
+public class GuessNumber{
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Random rm = new Random(); 
     int treid, attempts= 0, maxAttempts= 5; 
 
     int secretNumber= rm.nextInt(30) +1;
-    System.out.println(secretNumber);
     System.out.println("Adivina el numero del 0 al 30");
     System.out.println("Tienes " + maxAttempts + " intentos");
  

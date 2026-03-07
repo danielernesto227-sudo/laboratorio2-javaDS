@@ -21,7 +21,7 @@ public class Age {
 
         if (age >= 18) {
 
-        System.out.println( "Eres ,ayor de edad. ¡Ya puedes ingresar a este club nocturno!");
+        System.out.println( "Eres ,mayor de edad. ¡Ya puedes ingresar a este club nocturno!");
         } else {
         System.out.println( "Eres menor de edad. ¡Aún eres demaciado joven disfruta tu adolescencia sanamente!");
         }

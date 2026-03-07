@@ -5,7 +5,7 @@ public class GuessNumber{
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Random rm = new Random(); 
-    int treid, attempts= 0, maxAttempts= 5; 
+    int tried, attempts= 0, maxAttempts= 5; 
 
     int secretNumber= rm.nextInt(30) +1;
     System.out.println("Adivina el numero del 0 al 30");
@@ -13,10 +13,10 @@ public class GuessNumber{
  
     while (attempts < maxAttempts){
     System.out.print("Ingresa tu número: ");
-    treid = sc.nextInt();
+    tried = sc.nextInt();
     attempts++;
 
-if (treid ==secretNumber){
+if (tried ==secretNumber){
     System.out.println("Eres brujo o que? como adivinaste, es correcto!");
     System.out.println("Lo lograste en " + attempts + " intentos");
     break;}

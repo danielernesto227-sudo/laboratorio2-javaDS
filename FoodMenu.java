@@ -43,6 +43,7 @@ public class FoodMenu {
                      break;
                  default:
                     System.out.println("Opcion invalida");
+                    break;
             }
             }while (keep);     // Se repite mientras continuar sea true
                                         

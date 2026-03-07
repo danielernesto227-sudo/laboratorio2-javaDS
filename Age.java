@@ -29,15 +29,15 @@ public class Age {
 
         System.out.print(" \n¿Quieres ingresar otra edad? (s/n): ");
          repeat = sc.next();
-       } while (repeat.equals ("s"));
+        } while (repeat.equals ("s"));
 
-     // mostrar promedio al final
-     if (count > 0) {
+          // mostrar promedio al final
+        if (count > 0) {
         double promedio = (double) sum / count;
         System.out.println("\nEl promedio de las edades es: " + promedio);
-     }else {
+        }else {
         System.out.println("\nNo se ingresaron edades");
-      }
+        }
 
      sc.close();
     }

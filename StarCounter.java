@@ -8,7 +8,7 @@ public class StarCounter {
         String repeat;
         do{
         System.out.println("Welcome to Andromeda\n¿How many stars do you want?: ");
-       // System.out.println("¿How many stars do you want?: ");
+        // System.out.println("¿How many stars do you want?: ");
         int number= sc.nextInt();
         for (int i = 1; i <= number; i++) {
             System.out.print("*");
@@ -23,7 +23,7 @@ public class StarCounter {
         }
 
         }
-        while (repeat.contentEquals("s"));
+        while (repeat.equalsIgnoreCase("s"));
        
         sc.close();
         
